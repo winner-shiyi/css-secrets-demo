@@ -1,0 +1,25 @@
+{
+    "name": "5755",
+    "version": "1.0",
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-contrib-compass": "*",
+        "grunt-cli": "*",
+
+        "grunt-cmd-transport": "*",
+        "grunt-cmd-concat": "*",
+        "grunt-contrib-clean": "*",
+        "grunt-contrib-uglify": "*",
+
+        "grunt-contrib-copy": "*",
+        "grunt-contrib-watch": "*"
+    },
+    "spm": {
+        "alias": {
+            "base": "base",
+            "tabs": "tabs",
+            "slider": "slider"
+        }
+    },
+    "dependencies": {}
+}

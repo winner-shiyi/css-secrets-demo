@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+//图片路径：../../image/demo15/border_round.png
+
+.demo {
+	width: 240px;
+	padding: 80px 60px;
+	border: 20px solid rgba(104, 104, 142, 0.5);
+	border-radius: 10px;
+	color: #f36;
+	font-size: 25px;
+	line-height: 1.5em;
+	text-align: center;
+}
+.multipleBg {
+	background: url("../../image/demo18/bg-tl.png") no-repeat left top, 
+	url("../../image/demo18/bg-tr.png") no-repeat right top, 
+	url("../../image/demo18/bg-bl.png") no-repeat left bottom, 
+	url("../../image/demo18/bg-br.png") no-repeat right bottom, 
+	url("../../image/demo18/bg-repeat.png") repeat left top;
+	/*改变背景图片的position起始点，四朵花都是border边缘处起，而平铺背景是在paddin内边缘起*/
+	@include background-origin(border-box, border-box, border-box, border-box, padding-box); 
+	/*控制背景图片的显示区域，所有背景图片超边border外边缘都将被剪切掉*/
+	@include background-clip(border-box);
+}

@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+body{
+	background-color: #f6f6f6;
+}
+.demo{
+	width:940px;
+	margin:40px auto;
+	ul.main-promo{
+		border:5px solid #3d3d3d;
+		background: #1c1c1c;
+		@include border-radius(7px);
+		@include box-shadow(0 8px 16px rgba(0,0,0,.2));
+		li{
+			position: relative;
+			float:left;
+			padding:5px 0 5px 6px;
+			overflow: hidden;
+		}
+		.slide,.slide-img{
+			float:left;
+		}
+		.slide a{
+			position: relative;
+			display: block;
+			width:50px;
+			height:300px;
+			background-color:#303030;
+			z-index: 1;
+			@include border-radius(5px);
+			@include transition(all 0.3s ease-in);
+		}
+		.slide p{
+			position:absolute; 
+			top:30px;
+			left:-25px;
+			height:20px;
+			width:100px;
+			color:#ddd;
+			font-size: 14px;
+			font-weight: bold;
+			word-break:break-all;
+			@include text-shadow(0 1px 1px rgba(0,0,0,.8));
+			@include transform(rotate(-90deg)); 
+
+		}
+		.slide strong{
+			position: absolute;
+			bottom:15px;
+			left:15px;
+			color:#191919;
+			font-size: 30px;
+			@include text-shadow(0 1px 0 #454545);
+		}
+		.slide-img{
+			overflow: hidden;
+			width:0;
+			height: 0;
+			@include transition(width 0.5s ease-in-out);
+		}
+		.slide-img img{
+			width:692px;
+			height: 300px;
+		}
+		input[type="radio"]{
+			position: absolute;
+			left:5px;
+			width:50px;
+			height:300px;
+			cursor:pointer;
+			z-index: 99;//这个很重要 才能点到input
+			@include opacity(0);
+		}
+		input:checked~.slide a{
+			text-decoration: none;
+			@include background(radial-gradient(circle,#B95656,#6F718C));
+		}
+		input:checked~.slide-img{
+			overflow: visible;
+			width:692px;
+			height: 300px;
+			margin-left: 8px;
+		}
+	}
+
+}

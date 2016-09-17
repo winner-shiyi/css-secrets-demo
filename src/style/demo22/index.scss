@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+//图片路径：../../image/demo15/border_round.png
+
+body{
+	background: repeating-linear-gradient( to top, #f9f9f9, #f9f9f9 29px, #858282 30px );
+	background-size:100% 30px;
+	position: relative;
+	&::before{
+		content: "";
+		display: inline-block;
+		height: 900px;//若果百分百要生效，必须body也百分百，html也百分百
+		width: 4px;
+		border-left: 4px double #FCA1A1;
+		position: absolute;
+		left: 30px;
+	}
+}

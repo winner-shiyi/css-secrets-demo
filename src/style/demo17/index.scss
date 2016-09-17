@@ -1,0 +1,14 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+
+div {
+  width: 350px;
+  background: orange url(../../image/demo17/border.jpg);
+  padding: 20px;
+  color:#fff;
+  font-size: 60px;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

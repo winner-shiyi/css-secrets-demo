@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+.box{
+	width:200px;
+	height:200px;
+	margin:50px auto;
+	border-color: #FFBCD6;
+	outline: dotted thin;
+	//第一种，这种写法表示 四个方向的内阴影，四个方向的外阴影
+	@include box-shadow(0 1px 1px #FFBCD6,0 0 5px #ff9dc2);
+}

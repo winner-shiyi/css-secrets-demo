@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+//图片路径：../../image/demo15/border_round.png
+
+
+.wrap{
+	position: relative;
+	width:480px;
+	height:640px;
+	margin: 20px  auto;
+	background:url(../../image/demo20/live.jpg) no-repeat;
+	color:#fff;
+}
+.device-box{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width:285px;
+	padding:20px;
+	margin: -92px -163px;
+	background:#2e2424;
+	font-size: 12px;
+	text-align: center;
+	@include box-shadow(0 0 12px #525157);
+	.video,.audio{
+		float:left;
+		width:132px;
+		font-size: 14px;
+		p{
+			margin-bottom:8px;
+			line-height: 24px;
+			text-align: left;
+			text-indent:5px; 
+		}
+	}
+	.video{
+		margin-right: 15px;
+	}
+	select{
+		padding:0;margin:0;
+		width:120px;
+		padding:5px;
+		border:none;
+		color: #333;
+		font: 12px/1.14 arial,\5b8b\4f53;
+		outline: 0;
+		@include border-radius(2px);
+		&:focus,&:active{
+			outline: 0;
+		}
+	}
+	.tip{
+		height: 55px;
+    	line-height: 55px;
+		clear:both;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	.preview-btn,.begin-btn{
+		display: inline-block;
+		width:80px;
+		height:30px;
+		background:#f45ba8;
+		line-height: 30px;
+		color:#fff;
+		text-decoration: none;
+		&:hover{
+			background:#f970b5;
+			color:#fff;
+			text-decoration: none;
+		}
+	}
+	.preview-btn{
+		margin-right:20px;
+	}
+}

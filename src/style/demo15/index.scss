@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+body{
+	width:500px;
+	margin:50px auto;
+}
+
+.border-image1{
+	width:80px;
+	height:26px;
+	border:5px solid orange;
+	border-bottom: 0px;
+	text-align: center;
+	-moz-border-image: url(../../image/demo15/border_tab.png) 5 5 0;
+	-o-border-image: url(../../image/demo15/border_tab.png) 5 5 0;
+	-webkit-border-image: url(../../image/demo15/border_tab.png) 5 5 0;
+}
+.border-image2{
+	width:100px;
+	border:20px double gray; 
+	text-align: center;
+	@include border-image(url(../../image/demo15/border_round.png) 20);
+}
+.border-image-btn {
+    display: inline-block;
+    border: 18px solid green;
+    border-width: 0 18px;
+    @include border-image(url("../../image/demo15/button_sprite.png") 0 18 50 18);
+    -webkit-border-image: url("../../image/demo15/button_sprite.png") 0 18 50 18;
+    padding: 13px 10px 17px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 15px;
+    margin: 10px;
+}

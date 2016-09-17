@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+/* 初始化表单样式 */
+label,input,button,select,{
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+input,button,select,textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+select,input[type="text"],.uneditable-input {
+    display: inline-block;
+    height: 18px;
+    padding: 4px;
+    margin-bottom: 9px;
+    line-height: 18px;
+    color: #555;
+    font-size: 13px;
+}
+input[type="text"],.uneditable-input {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    @include transition(border 0.2s linear, box-shadow 0.2s linear);
+}
+body{
+	background: #fff;
+	width:800px;
+	margin:50px auto;
+	.control-group {
+	    margin-bottom: 18px;
+	}
+	.control-label {
+	    float: left;
+	    width: 140px;
+	    padding-top: 5px;
+	    text-align: right;
+	}
+	.controls{
+		margin-left: 160px;
+	}
+	.help-inline {
+	    display: inline-block;
+	    padding-left: 5px;
+	    vertical-align: middle;
+	}
+
+	input[type="text"]:focus {
+		outline: 0;
+	    border-color: rgba(82, 168, 236, 0.8);
+	    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	}
+	input:disabled{
+		cursor:not-allowed;
+		background-color: #eee;
+		border-color: #ddd;
+	}
+
+}

@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+body {
+	background: #dfdfdf;
+	font:12px/1.5 Helvetica,arial;
+	@include backface-visibility(hidden);
+
+	.demo {
+		margin: 60px auto;
+		text-align: center;
+	}
+	.nav {
+		li {
+			display: inline-block;
+			margin-left: -50px;
+			@include transition(all 0.4s linear);
+			a {
+				display: block;
+				width: 120px;
+				height: 120px;
+				padding: 30px;
+				border-width: 8px;
+				border-style: solid;
+				text-decoration: none;
+				@include border-radius(50%);
+			}
+			span {
+				display: block;
+				line-height: 70px;
+				font-size: 30px;
+				font-style: normal;
+			}
+			span:before {
+				display: block;
+				font-family: "LigatureSymbols";
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				 -moz-font-smoothing: antialiased;
+				 -ms-font-smoothing: antialiased;
+				 -o-font-smoothing: antialiased;
+				 font-smoothing: antialiased;
+				 -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+				 -moz-font-feature-settings: "liga=1, dlig=1";
+				 -ms-font-feature-settings: "liga" 1, "dlig" 1;
+				 font-feature-settings: "liga" 1, "dlig" 1;
+				font-size: 80px;
+			}
+			&:hover {
+				 z-index: 11;
+				@include transform(scale(1.1));
+
+				a {
+					text-decoration: none;
+				}
+				span {
+
+					@include transition(all 0.4s linear);
+					@include animation(moveFromBottom 0.3s ease);
+				}
+			}
+		}
+		li:nth-child(1) a {
+			color: #4d9683;
+			border-color: #549e89;
+			background-color: #51c9a7;
+			@include text-shadow(0 1px 0 #9de3cf);
+		}
+		li:nth-child(2) a {
+			color: #be607e;
+			border-color: #e499b0;
+			background-color: #e67b9c;
+			@include text-shadow(0 1px 0 #de8ba5);
+		}
+		li:nth-child(3) a {
+			color: #5e9eb4;
+			border-color: #a2cfde;
+			background-color: #7ec9e3;
+			@include text-shadow(0 1px 0 #adddec);
+		}
+		li:nth-child(4) a {
+			color: #ba9d5e;
+			border-color: #dcc999;
+			background-color: #f0cd78;
+			@include text-shadow(0 1px 0 #f5e0ad);
+		}
+		li:nth-child(5) a {
+			color: #b468a2;
+			border-color: #d8abcd;
+			background-color: #dd91cb;
+			@include text-shadow(0 1px 0 #e8acd8);
+		}
+		li:nth-child(1):hover a {
+			color: #0f775c;
+			border-color: #0a8462;
+			background-color: #00c18c;
+			@include text-shadow(0 1px 0 #81e6c9);
+		}
+		li:nth-child(2):hover a {
+			color: #b12a55;
+			border-color: #ba335c;
+			background-color: #ea5180;
+			@include text-shadow(0 1px 0 #ff95b7);
+		}
+		li:nth-child(3):hover a {
+			color: #2883a2;
+			border-color: #4397b3;
+			background-color: #55c1e5;
+			@include text-shadow(0 1px 0 #9cdef2);
+		}
+		li:nth-child(4):hover a {
+			color: #ab8228;
+			border-color: #b08f3e;
+			background-color: #f8c64d;
+			@include text-shadow(0 1px 0 #ffe199);
+		}
+		li:nth-child(5):hover a {
+			color: #a33689;
+			border-color: #b7569f;
+			background-color: #dd70c3;
+			@include text-shadow(0 1px 0 #ec97d6);
+		}
+		li:nth-child(1) span:before {
+			content: "home";
+		}
+		li:nth-child(2) span:before {
+			content: "phone";
+		}
+		li:nth-child(3) span:before {
+			content: "wifi";
+		}
+		li:nth-child(4) span:before {
+			content: "setting";
+		}
+		li:nth-child(5) span:before {
+			content: "twitter";
+		}
+	}
+}
+@include keyframes(moveFromBottom) {
+	from {
+		@include transform(translateY(120%), scale(0.5));
+		opacity: 0;
+	}
+	to {
+		@include transform(translateY(0), scale(1));
+		opacity: 1;
+	}
+}
+@font-face {
+	font-family: 'LigatureSymbols';
+	src: url('font/LigatureSymbols-2.05.eot');
+	src: url('font/LigatureSymbols-2.05.eot?#iefix') format('embedded-opentype'), 
+	url('font/LigatureSymbols-2.05.woff') format('woff'), 
+	url('font/LigatureSymbols-2.05.ttf') format('truetype'), 
+	url('font/LigatureSymbols-2.05.svg#LigatureSymbols') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

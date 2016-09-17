@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3"; 
+
+body{
+	background-color: #000;
+	font-size: 12px;
+}
+@include keyframes (demo-an){
+	to{
+		-webkit-mask-position:500px 0;
+	}
+}
+.demo{
+	width:12em;
+	color:#fff;
+	font:bold 4em \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53,sans-serif;
+	margin:1em;
+	text-align: center;
+	text-shadow:1px 1px 0 #ccc;
+	-webkit-mask:-webkit-linear-gradient(left,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,0) 20%) -500px 0 no-repeat content;
+	@include border-radius(4em);
+	@include animation(demo-an 8s ease-out infinite);
+}

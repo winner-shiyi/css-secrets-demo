@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+.accordionMenu {
+	width: 500px;
+	margin: 0 auto;
+	padding: 10px;
+	background: #fff;
+	color: #424242;
+	font: 12px Arial, Verdana, sans-serif;
+	h2 {
+		position: relative;
+		margin: 5px 0;
+		a {
+			display: block;
+			padding: 10px;
+			background: #8f8f8f;
+			@include border-radius(5px);
+			@include background-image(linear-gradient(180deg, #cecece, #8f8f8f));
+			color: #424242;
+			font-size: 13px;
+			text-shadow: 2px 2px 2px #643939;
+			text-decoration: none;
+			&:focus,&:hover,&:active{
+				background: #2288dd;
+				@include background-image(linear-gradient(to bottom,#6bb2ff, #2288dd));
+				color:#FFF;
+			}
+		}
+		
+	}
+	/* 制作小三角形效果 */
+	h2::before {
+		position: absolute;
+		right: 10px;
+		top: 15px;
+		width: 0;
+		height: 0;
+		content: "";
+		border: 5px solid #fff;
+		border-color: #fff transparent transparent;
+	}
+	p {
+		height: 0;
+		padding:0 10px;
+		overflow: hidden;
+		@include transition(height 0.5s ease-in);
+	}
+	:target p {
+		height:190px;
+		/* overflow: auto; */
+	}
+	:target h2::before {
+		border-color: transparent transparent transparent #fff;
+	}
+	:target h2 a{
+		background: #2288dd;
+		@include background-image(linear-gradient(to bottom,#6bb2ff, #2288dd));
+		color:#FFF;
+	}
+
+}

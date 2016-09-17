@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+body {
+	@include background(radial-gradient(#fff 10%, #fefefe 20%, #d7d7d7));
+}
+.demo {
+	text-align: left;
+
+	ul {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		margin: 40px auto 0;
+	}
+	li {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		clip: rect(100px, 200px, 200px, 0px);
+		/* background: green; */
+	}
+	.deg_1 {
+		@include transform(rotate(72deg));
+	}
+	.deg_2 {
+		@include transform(rotate(144deg));
+	}
+	.deg_3 {
+		@include transform(rotate(216deg));
+	}
+	.deg_4 {
+		@include transform(rotate(288deg));
+	}
+	.deg_5 {
+		@include transform(rotate(360deg));
+	}
+	.pie {
+		/* background: gray; */
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		clip: rect(0px, 100px, 200px, 0px);
+		@include border-radius(100px);
+		@include transform(rotate(18deg) translateZ(0));
+		@include box-shadow(0 0 10px 3px rgba(255, 255, 255, .85) inset);
+	}
+	.deg_1 .pie {
+		@include background-image(linear-gradient(top, #f16d4b, #e15f3d));
+	}
+	.deg_2 .pie {
+		@include background-image(linear-gradient(top, #a2be5f, #98b454));
+	}
+	.deg_3 .pie {
+		@include background-image(linear-gradient(top, #f7b71b, #fec332));
+	}
+	.deg_4 .pie {
+		@include background-image(linear-gradient(top, #edeeef, #e7ecef));
+	}
+	.deg_5 .pie {
+		@include background-image(linear-gradient(top, #a1d5dd, #77bcc7));
+	}
+	.pie:after {
+		position: absolute;
+		top: 120px;
+		left: 45px;
+		font-family: 'brankic1979';
+		font-style: normal;
+		speak: none;
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+		font-size: 36px;
+		color: rgba(0, 0, 0, .25);
+	}
+	.deg_1 .pie:after {
+		content: "\e041";
+		transform: rotate(180deg);
+	}
+	.deg_2 .pie:after {
+	  content:"\e04b";
+	  transform: rotate(180deg);
+	}
+	.deg_3 .pie:after {
+	  content:"\e09b";
+	  transform: rotate(34deg);
+	}
+	.deg_4 .pie:after {
+	  content:"\e098";
+	  transform: rotate(322deg);
+	}
+	.deg_5 .pie:after {
+	  content:"\e081";
+	  transform: rotate(250deg);
+	}
+	.dot{
+		position:absolute;
+		top:50%;
+		left:50%;
+		width:30px;
+		height:30px;
+		margin:-15px 0 0 -15px;
+		border:1px solid #eee;
+		@include border-radius(15px 15px 15px 0);
+		@include box-shadow(0 0 8px rgba(0,0,0,.37));
+		@include background-image(linear-gradient(top,#fcfcfd,#e1e6e9));
+		@include transform(28deg);
+	}
+	.dot:after{
+		position: absolute;
+		top:18px;
+		left:5px;
+		color: #fff;
+		content: "";
+		width: 0;
+		height: 10px;
+		border-left: 1px solid #adadad;
+		@include box-shadow(1px 0 0 rgba(255,255,255,.5));
+		@include transform(rotate(45deg));
+	}
+	
+}
+@font-face {//这个不能写在 demo嵌套中
+	font-family:'brankic1979';
+	src: url('fonts/brankic1979.eot');
+	src: url('fonts/brankic1979.eot?#iefix') format('embedded-opentype'), 
+	url('fonts/brankic1979.woff') format('woff'),
+	url('fonts/brankic1979.ttf') format('truetype'), 
+	url('fonts/brankic1979.svg#brankic1979') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

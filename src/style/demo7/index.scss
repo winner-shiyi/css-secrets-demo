@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+body {
+	background-color: #d97398;
+}
+.controls_button{
+  width: 420px;
+  margin:40px auto;
+}
+.button {
+	width: 70px;
+	height: 70px;
+	margin-right: 90px;
+	border: none;
+	outline: none;
+	@include border-radius(35px);
+	// @include box-shadow(0 1px 5px rgba(255,255,255,.5) inset,0 -2px 5px rgba(0,0,0,.3) inset,0 3px 8px rgba(0,0,0,.8));
+	@include box-shadow(0 3px 8px rgba(0,0,0,.8));
+	@include background(radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c));
+}
+.button:nth-child(3) {
+	margin-right: 0;
+}
+.button:after {
+	font-family: "icomoon";
+	content: "\21";
+	speak:none;
+	font-weight: normal;
+	font-size: 36px;
+	color:#dd5183;
+	-webkit-font-smoothing: antialiased;
+	@include text-shadow(0 3px 10px #f1a2c1,0 -3px 10px #f1a2c1);
+}
+.button:nth-child(2):after{
+  content: "\22";
+}
+.button:nth-child(3):after{
+  content: "\23";
+}
+.button:hover:after{
+	color:#fff; 
+	@include text-shadow(0 1px 20px #fccdda, 1px 0 14px #fccdda);
+}
+.button:active{
+	outline: none;
+	@include box-shadow(0 2px 7px rgba(0,0,0,.5) inset,0 -3px 10px rgba(0,0,0,.1) inset,0 1px 3px rgba(255,255,255,.5));
+	@include background(radial-gradient(top center, circle, #f28fb8, #e982ad, #ec568c));
+}
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot');
+	src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+	url('fonts/icomoon.svg#icomoon') format('svg'), 
+	url('fonts/icomoon.woff') format('woff'), 
+	url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

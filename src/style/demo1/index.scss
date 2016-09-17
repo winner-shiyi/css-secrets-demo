@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import "common";
+//其实只有引入compass，就可以在css3中自动补全前缀
+@import "compass/css3";
+
+body {
+	background-color: #d4d4d4;
+	padding: 400px;
+}
+.demo {
+	margin: 40px auto;
+	width: 500px;
+	.box {
+		position: relative;
+		height: 40px
+	}
+	.leaf {
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		@include border-radius(300px 0);
+		@include background(linear-gradient(45deg, rgba(188, 190, 192, 1) 8%, rgba(158, 31, 99, 1) 30%, rgba(158, 31, 99, 1) 100%));
+		@include opacity(.5);
+		@include transform(rotate(45deg));
+		@include transform-origin(top, right);
+	}
+	@include keyframes (show-2) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(71deg);
+		}
+	}
+	@include keyframes (show-3) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(96deg);
+		}
+	}
+	@include keyframes (show-4) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(123deg);
+		}
+	}
+	@include keyframes (show-5) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(149deg);
+		}
+	}
+	@include keyframes (show-6) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(175deg);
+		}
+	}
+	@include keyframes (show-7) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(200deg);
+		}
+	}
+	@include keyframes (show-8) {
+		0% {
+			transform: rotate(45deg);
+		}
+		100% {
+			transform: rotate(225deg);
+		}
+	}
+	.leaf:nth-child(2) {
+		@include animation(show-2 5s ease-in-out 1);
+	}
+	.leaf:nth-child(3) {
+		@include animation(show-3 5s ease-in-out 1);
+	}
+	.leaf:nth-child(4) {
+		@include animation(show-4 5s ease-in-out 1);
+	}
+	.leaf:nth-child(5) {
+		@include animation(show-5 5s ease-in-out 1);
+	}
+	.leaf:nth-child(6) {
+		@include animation(show-6 5s ease-in-out 1);
+	}
+	.leaf:nth-child(7) {
+		@include animation(show-7 5s ease-in-out 1);
+	}
+	.leaf:nth-child(8) {
+		@include animation(show-8 5s ease-in-out 1);
+	}
+
+}

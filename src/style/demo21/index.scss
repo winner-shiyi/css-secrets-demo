@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+//图片路径：../../image/demo15/border_round.png
+
+//斑点纹理背景制作
+body{
+  background-color: #6b6161;
+	@include background-image(radial-gradient(black 15%, transparent 16%),
+	radial-gradient(black 15%, transparent 16%),
+	radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%),
+	radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%));
+    background-position: 0 0px, 8px 8px, 0 1px, 8px 9px;
+    @include background-size(16px 16px);
+}
+.controls_button{
+  width: 450px;
+  margin:40px auto;
+  .button{
+    width: 70px;
+    height: 70px;
+    margin-right:65px;
+    border:none;
+    font-size:0;
+    outline:none;
+    @include border-radius(50%);
+    @include box-shadow(0 1px 5px rgba(255,255,255,.5) inset,0 -2px 5px rgba(0,0,0,.3) inset,0 3px 8px rgba(0,0,0,.8));
+    @include background-image(radial-gradient(circle at top center, #f28fb8, #e982ad, #ec568c));
+    &:nth-child(3) {
+    	margin-right: 0;
+    }
+    &::after {
+    	font-family: "icomoon";
+    	content: "\21";
+    	font-weight: normal;
+    	font-size: 36px;
+    	color:#dd5183;
+    	@include text-shadow(0 3px 10px #f1a2c1,0 -3px 10px #f1a2c1);
+    }
+    &:nth-child(2)::after{
+      content: "\22";
+    }
+    &:nth-child(3)::after{
+      content: "\23";
+    }
+    &:hover::after{
+    	color:#fff; 
+    	@include text-shadow(0 1px 20px #fccdda, 1px 0 14px #fccdda);
+    }
+    &:active{
+    	outline: none;
+    	@include box-shadow(0 2px 7px rgba(0,0,0,.5) inset,0 -3px 10px rgba(0,0,0,.1) inset,0 1px 3px rgba(255,255,255,.5));
+    }
+  }
+
+}
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot');
+	src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+	url('fonts/icomoon.svg#icomoon') format('svg'), 
+	url('fonts/icomoon.woff') format('woff'), 
+	url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

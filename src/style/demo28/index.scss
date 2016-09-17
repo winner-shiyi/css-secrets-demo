@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import "common";
+@import "compass/css3";
+//图片路径：../../image/demo15/border_round.png
+
+// http://www.zhangxinxu.com/study/201410/css3-icons-currentcolor.html
+// file:///D:/fancy-icon/index.html
+
+
+.container{ 
+	width: 1000px;
+    padding-top: 50px;
+    margin: 0 auto;
+    .box{
+    	margin-bottom: 50px;
+    }
+    li{
+    	float: left;
+    	width: 10%;
+    	height: 100px;
+    	margin-bottom: 10px;
+    	text-align: center;
+    	span{
+    		display: block;
+    	}
+    }
+    .icon{
+    	position: relative;
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		font-size: 20px;
+		color: currentColor;
+    }
+    .icon::before,.icon::after{
+    	position: absolute;
+    	content:'';
+    }
+    .icon-home::before{
+    	top:0;
+    	left:0;
+    	width:0;
+    	height:0;
+    	border:.5em solid transparent;
+    	border-bottom-color:currentColor;
+    	border-top:0;
+    }
+    .icon-home::after{
+    	top:.45em;
+    	left:.2em;
+    	width:.3em;
+    	height:.3em;
+    	border:.2em solid currentColor;
+    	border-bottom:0;
+    	border-top-width:.25em;
+    }
+    .icon-list::before{
+    	top: .2em;
+        left: 0px;
+        width: .1em;
+        height: .1em;
+        padding: .2em 0;
+        border-top: .1em solid currentColor;
+        border-bottom: .1em solid currentColor;
+    	background-color: currentColor;
+    	@include background-clip(content-box);
+    }
+    .icon-list::after{
+    	top:.2em;
+    	left:.25em;
+    	width:.55em;
+    	height:.1em;
+    	padding:.2em 0;
+    	border-top: .1em solid currentColor;
+    	border-bottom: .1em solid currentColor;
+    	background-color: currentColor;
+    	@include background-clip(content-box);
+    }
+    .icon-tile::before{
+    	top:.2em;
+    	left:.2em;
+    	width:.15em;
+    	height:.15em;
+    	background: currentColor;
+    	box-shadow: 0 .25em currentColor,
+    	0 .5em currentColor,
+    	.25em  0 currentColor,
+    	.5em 0 currentColor,
+    	.25em .25em currentColor,
+    	.5em .25em currentColor,
+    	.25em .5em currentColor,
+    	.5em .5em currentColor;
+    }
+
+}
