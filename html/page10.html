@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>page10-currentColor-inherit</title>
+	<style>
+		*{padding:0;margin:0;}
+		body{padding: 50px;}
+		h3{
+			margin: 50px 0 50px;
+		}
+		.demo1{
+			width:300px;
+		    height: 50px;
+			color:red;
+			border:1px solid;
+			box-shadow: 5px 5px 5px;
+		}
+		.demo2{
+			font-size: 20px;
+			color:red;
+		}
+		.demo2 .a1{
+			color: inherit;
+			font: inherit;
+		}
+		.demo3{
+		    width:300px;
+		    height: 50px;
+		    border:1px solid blue;
+		    color:#000;
+		    background: green;
+		    position: relative;  
+		}
+		.demo3::before{
+		    content:"";
+		    position: absolute;
+		    top:-.4em;left:1em;
+		    padding:.35em;
+		    background: inherit;
+		    border:inherit;
+		    border-right: 0;
+		    border-bottom: 0;
+		    transform:rotate(45deg);
+		}
+	</style>
+</head>
+<body>
+	<h3>1,currentColor:</h3>
+	<div class="demo1">它是border-color outline-color box-shadow text-shadow的默认值</div>
+	<h3>2,inherit作用于color 和 font:</h3>
+	<div class="demo2">合理利用继承的作用&nbsp;<a href="#" class="a1">我是a标签</a>&nbsp;<a href="#">默认长这样</a></div>
+	<h3>3,inherit作用于background:</h3>
+	<div class="demo3">
+	    注意我的小箭头使用了继承背景色，这个箭头其实是一个长方形旋转得来的哦
+	</div>
+	
+</body>
+</html>
