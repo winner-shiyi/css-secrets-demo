@@ -21,7 +21,7 @@ button{
 	background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent);
 }
 .button2{
-	background: #58a linear-gradient(#77a0bb,#58a);
+	background: #58a linear-gradient(hsla(0,0%,0%,.5),transparent);
 }
 .cancel{
 	background-color: #c00;
@@ -29,6 +29,7 @@ button{
 .ok{
 	background-color:#6b0;
 }
+
 .cancel2{
 	background-color: #c00;
 }
