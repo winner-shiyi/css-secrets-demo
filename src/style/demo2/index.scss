@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import "../common";
+
+body{
+	height: 1000px;
+	background:url("../../image/demo2/tiger.jpg") 0 / cover fixed;
+}
+.main{
+	position:relative;
+	top:200px;
+	margin:0 auto;
+	padding:20px;
+	width:500px;
+	height: 400px;
+	background:hsla(0,0%,100%,.25) border-box;
+	border-radius: 10px;
+	box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset, 0 .5em 1em rgba(0, 0, 0, 0.6);
+	overflow: hidden;
+}
+.bg{
+	position:absolute;
+	top:0;
+	right: 0;
+	bottom:0;
+	left:0;
+	background:url("../../image/demo2/tiger.jpg") 0 / cover fixed;
+	margin:-30px;
+	filter:blur(20px);
+}
+.txt{
+	position: relative;
+}
