@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+//小版
+.sm-home{
+	.wrap-box{
+		padding:28px 0 0 205px;
+		.home-box {
+		    width: 1015px;
+		}
+		.mod-list .w296 {
+		    width: 247px;
+		    margin-right: 9px;
+		    .img{
+		    	width: 247px;
+		    }
+		    .new-txt{
+		    	width: 237px;
+		    }
+		}
+	}
+	//直播流区域
+	.video-area{
+		.video-box {
+	    	width: 553px;
+		}
+	}
+	//活动&游戏
+	.activity-area{
+		.mod-list li {
+		    width: 250px;
+		    margin-left: 3px;
+		}
+		.act-bg{
+			width:1052px;;
+		}
+	}
+	//排行榜
+	.rank-area{
+		.list-box {
+		    width: 250px;
+		    margin-right: 5px;
+		    li{
+		    	width: 228px;
+		    	left:9px;
+		    }
+		    .name{
+		    	width:75px;
+		    	margin-left:0;
+		    }
+		}
+		.god{
+			em.ul {
+			    margin-left: 22px;
+			    *margin-left:20px;
+			}
+		}
+		.notice{
+			.item{
+				width: 102px;
+			}
+		}
+	}
+	//夜间版
+	.night-use{
+		.video-item{
+			ul{
+				width:459px;
+			}
+		}
+	}
+	.night-video-box{
+		width:555px;
+		li{
+			width: 276px;
+			margin-right:3px;
+		}
+		.banner{
+			width:555px;
+		}
+	}
+}
