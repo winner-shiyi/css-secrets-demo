@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/**
+ * Created by zhaopeidi on 2015/3/3.
+ * 网站头部样式
+ */
+.mod-rightside {
+    position: fixed;
+    right: 0;
+    bottom: 150px;
+    z-index: 3;
+
+    li {
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+        color: #ffffff;
+        background: #b5b6b7;
+        margin-bottom: 3px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+
+        span {
+            display: none;
+        }
+        em {
+            display: block;
+            width: 32px;
+            height: 32px;
+            background: red;
+            vertical-align: middle;
+        }
+    }
+    .phonebg {
+        width: 218px;
+        height: 213px;
+        display: inline-block;
+        vertical-align: middle;
+        //background: url($pathPcImg +'index/numbg.png');
+        background: url('index/numbg.png');
+        position: absolute;
+        top: -140px;
+        left: -218px;
+        cursor: inherit;
+
+        img {
+            margin-top: 25px;
+            height: 75px;
+        }
+        p {
+            margin-top: -10px;
+            *margin-top: 0;
+            color: #f45ba8;
+            line-height: 21px;
+        }
+    }
+}
+.mod-rightside li:hover {
+    background: #f45ba8;
+}
+.mod-rightside li:hover em {
+    display: none;
+}
+.mod-rightside li:hover span {
+    display: block;
+}

@@ -7,6 +7,83 @@
 	<link rel="stylesheet" href="../dist/style/demo4/index.css">
 </head>
 <body class="sm-home">
+	<div id="headControl">
+	    <div class="g-head-solid" id="gHeadSolid"></div>
+	    <div class="my-head" id="mainhead">
+	        <div class="my-header">
+	            <a href="/" title="秀吧视频互动社区">
+	                <span class="my-logo"></span>
+	            </a>
+	            <ol class="my-nav" id="btn_list">
+	                <li class="cur">
+	                    <a class="xiusta" stadata="{en:'28000',weight:1,xst:'x',et:'mc',tm:'more',v:1,msg:'首页'}" href="/">首页</a></li>
+	                <li style="position: relative">
+	                    <a class="xiusta" stadata="{en:'28001',weight:1,xst:'x',et:'mc',tm:'more',v:1,,href:'/clan/index',msg:'公会频道'}" href="/clan/index">公会频道</a>
+	                    <i class="hot-icon"></i>
+	                </li>
+	                <li>
+	                    <a class="xiusta" stadata="{en:'28002',weight:1,xst:'x',et:'mc',tm:'more',v:1,href:'/rank',msg:'排行榜'}" href="/rank">排行榜</a></li>
+	                <li>
+	                    <a class="xiusta" stadata="{en:'28003',weight:1,xst:'x',et:'mc',tm:'more',v:1,href:'/mall',msg:'商城'}" href="/mall" rel="external nofollow">商城</a></li>
+	                <li>
+	                    <a class="xiusta" stadata="{en:'28004',weight:1,xst:'x',et:'mc',tm:'more',v:1,href:'/order/readypay',msg:'充值'}" href="/order/readypay" rel="external nofollow">充值</a></li>
+	                <li class="games">
+	                    <a class="xiusta" stadata="{en:'28005',weight:1,xst:'x',et:'mc',tm:'more',v:1,href:'/games-center',msg:'游戏'}" href="/games-center" rel="external nofollow">游戏</a></li>
+	                <li class="my-app-down">
+	                    <a class="xiusta" stadata="{en:'28008',weight:1,xst:'x',et:'mc',tm:'more',v:1,href:'/download/mobile',msg:'APP下载'}" href="/download/mobile" id="downIcon"><i class="navIcon app"></i><span>APP下载</span></a>
+	                </li>
+	            </ol>
+	            <ul class="my-user-panel">
+	                <li class="my-search">
+	                    <input type="text" id="search_key" value="主播昵称/ID/靓号" class="my-search_key xiusta" stadata="{en:'28010',weight:5,xst:'x',et:'mc',tm:'more',v:1,msg:'搜索输入框'}" onfocus="if(this.value=='主播昵称/ID/靓号'){this.value=''}" onblur="if(this.value==''){this.value='主播昵称/ID/靓号'}" onkeydown="seachBox.selectHandler(this.value)"><span class="icn-bg"><a class="navIcon icn-search xiusta" stadata="{en:'28011',weight:1,xst:'x',et:'mc',tm:'more',v:1,msg:'搜索按钮'}"></a></span>
+	                </li>
+	                <li id="login_btn" class="my-sign-in" style="display: none;">
+	                    <a class="mr5 xiusta" stadata="{en:'28012',weight:3,xst:'x',et:'mc',tm:'more',v:1,msg:'登录'}" href="javascript:void(0)" onclick="Auth_Window.ShowWindow(0)">登录</a>
+	                    <a class="mr5" href="javascript:void(0)" onclick="Auth_Window.ShowWindow(1)">注册</a></li>
+	                <li class="my-first" id="userBox">
+	                    <span class="my-pers" id="hpers">
+	                        <img class="pho" width="40" height="40" src="http://img.xiu8.com/img/avatar/s/1_1/2b/2ff/56749ff5d3df4515dfafd79135c2ff2b.jpg">
+	                        <i class="name">秀吧新人_9ud_6E3</i>
+	                        <em class="navIcon triangle"></em>
+	                    </span>
+	                    <div class="my-dlg-merber" style="display:none;">
+	                        <div class="d-con">
+	                            <ul class="f-cb">
+	                                <li class="my-pro-img">
+	                                    <dl id="hlevelIcon">
+	                                        <dt class="fl">
+	                                            <img class="pho" width="50" height="50" src="http://img.xiu8.com/img/avatar/s/1_1/2b/2ff/56749ff5d3df4515dfafd79135c2ff2b.jpg"></dt>
+	                                        <dd>
+	                                            <p class="name">秀吧新人_9ud_6E3</p>
+	                                            <p>
+	                                                <em class="ul ul1"></em>
+	                                            </p>
+	                                        </dd>
+	                                    </dl>
+	                                    <p class="money">
+	                                        <span id="hMoney">
+	                                            <em class="navIcon xiu-money"></em>4秀币</span>
+	                                        <a class="xiusta" stadata="{en:'28013',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/order/readypay',msg:'充值'}" href="/order/readypay">充值</a></p>
+	                                </li>
+	                                <li class="my-pro-list">
+	                                    <a class="xiusta" stadata="{en:'28014',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/info',msg:'个人资料'}" href="/user/info">个人资料</a>
+	                                    <a class="xiusta" stadata="{en:'28015',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/password',msg:'修改密码'}" href="/user/password">修改密码</a>
+	                                    <a class="xiusta" stadata="{en:'28016',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/care',msg:'我的关注'}" href="/user/care">我的关注</a>
+	                                    <a class="xiusta" stadata="{en:'28017',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/guard',msg:'我的守护'}" href="/user/guard">我的守护</a>
+	                                    <a class="xiusta" stadata="{en:'28018',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/orderList',msg:'充值查询'}" href="/user/orderList">充值查询</a>
+	                                    <a class="xiusta" stadata="{en:'28019',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/sendGifts',msg:'送礼记录'}" href="/user/sendGifts">送礼记录</a>
+	                                    <a class="xiusta" stadata="{en:'28020',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/user/sysmsg',msg:'系统消息'}" href="/user/sysmsg">系统消息</a>
+	                                    <a class="xiusta" stadata="{en:'28021',weight:3,xst:'x',et:'mc',tm:'more',v:1,href:'/logout',msg:'退出'}" href="/logout">退出</a></li>
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </li>
+	                <li class="my-btn-box">
+	                    <a class="my-live xiusta" stadata="{en:'28022',weight:2,xst:'x',et:'mc',tm:'more',v:1,msg:'我要直播'}" target="_blank" id="gotoRoom">我要直播</a></li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
 	<div class="wrap-box">
 		<div class="home-box">
 			<!-- 夜版多输出一个className night-use-->
@@ -929,6 +1006,133 @@
 			</div>
 			
 		</div>
+	</div>
+	<!-- 左侧导航 -->
+	<div class="mod-left-nav">
+	    <h1 class="left-logo"></h1>
+	    <!--登录-->
+	    <div class="nav-sign-in">
+	     <a class="sign-btn" href="javascript:;"><!--登录--></a> <a class="register-btn" href="javascript:;"><!--注册--></a>
+	    </div>
+	    <!--登录以后-->
+	    <dl class="left-info f-dn">
+	        <dt ><img class="img40" src="http://img.xiu8.com/img/avatar/s/1_1/e6/428/61713227edb5305ed8851fe2981428e6.jpg" alt=""/></dt>
+	        <dd>
+	            <p class="name">用户名称用户名称用户名称用户名称用户名称</p>
+	            <p><em class="ul ul29"></em><em></em><span class="org">400068</span></p>
+	            <p class="op-txt"><a class="mr22" href="#">开通VIP</a><a class="ml22" href="#">个人中心</a></p>
+	        </dd>
+	    </dl>
+	    <ul class="nav-tab">
+	        <li><em class="guard-icon"></em>我的守护<em class="right-triangle"></em></li>
+	        <li><em class="follow-icon"></em>我的关注<em class="right-triangle"></em></li>
+	        <li><em class="look-icon"></em>我看过的<em class="right-triangle"></em></li>
+	    </ul>
+	    <div class="qr-code">
+	        <img src="http://s2.xiu8.com//dist/img/pc/index/left-er.png" alt=""/>
+	        <p>手机APP下载</p>
+	    </div>
+	    <div class="nav-pub-wrapper">
+	        <h3 class="tit">我的关注</h3>
+	        <!--正在直播-->
+	        <div class="wrapper-hide" >
+	            <div class="state-live">
+	                <h4 class="state-tit">正在直播</h4>
+	                <ul>
+	                    <li>
+	                        <a class="pos" href="">
+	                            <img class="img160" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                            <span class="peo-num"><i class="peo"></i>1000</span>
+	                        </a>
+	                        <p class="sta-name" ><em class="al al36"></em><a class="name">用户名称用户名称用户名称用户名称用户名称</a></p>
+	                    </li>
+	                    <li>
+	                        <a class="pos" href="">
+	                            <img class="img160" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                            <span class="peo-num"><i class="peo"></i>1000</span>
+	                        </a>
+	                        <p class="sta-name" ><em class="al al36"></em><a class="name">用户名称用户名称用户名称用户名称用户名称</a></p>
+	                    </li>
+	                    <li>
+	                        <a class="pos" href="">
+	                            <img class="img160" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                            <span class="peo-num"><i class="peo"></i>1000</span>
+	                        </a>
+	                        <p class="sta-name" ><em class="al al36"></em><a class="name">用户名称用户名称用户名称用户名称用户名称</a></p>
+	                    </li>
+	                    <li>
+	                        <a class="pos" href="">
+	                            <img class="img160" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                            <span class="peo-num"><i class="peo"></i>1000</span>
+	                        </a>
+	                        <p class="sta-name" ><em class="al al36"></em><a class="name">用户名称用户名称用户名称用户名称用户名称</a></p>
+	                    </li>
+	                    <li>
+	                        <a class="pos" href="">
+	                            <img class="img160" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                            <span class="peo-num"><i class="peo"></i>1000</span>
+	                        </a>
+	                        <p class="sta-name" ><em class="al al36"></em><a class="name">用户名称用户名称用户名称用户名称用户名称</a></p>
+	                    </li>
+	                    <li>
+	                        <a class="pos" href="">
+	                            <img class="img160" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                            <span class="peo-num"><i class="peo"></i>1000</span>
+	                        </a>
+	                        <p class="sta-name" ><em class="al al36"></em><a class="name">用户名称用户名称用户名称用户名称用户名称</a></p>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!--休息中-->
+	            <div class="state-no-live">
+	                <h4 class="state-tit">休息中</h4>
+	                <ul>
+	                    <li>
+	                        <a href="">
+	                            <img class="img40" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                        </a>
+	                        <a class="name" href="">用户名称用户名称用户名称用户名称用户名称</a>
+	                    </li>
+	                    <li>
+	                        <a href="">
+	                            <img class="img40" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                        </a>
+	                        <a class="name" href="">用户名称用户名称用户名称用户名称用户名称</a>
+	                    </li>
+	                    <li>
+	                        <a href="">
+	                            <img class="img40" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                        </a>
+	                        <a class="name" href="">用户名称用户名称用户名称用户名称用户名称</a>
+	                    </li>
+	                    <li>
+	                        <a href="">
+	                            <img class="img40" src="http://img.xiu8.com/img/avatar/m/4_3/b7/c89/d2a9df14dc188013adc3372e69bc89b7.jpg" alt=""/>
+	                        </a>
+	                        <a class="name" href="">用户名称用户名称用户名称用户名称用户名称</a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	       <!--没有数据-->
+	        <div class="no-data f-dn">
+	           <p class="bgc-img"></p>
+	           <p class="no-txt">暂时没有关注的主播</p>
+	        </div>
+	    </div>
+	</div>
+	<!-- 右侧挂件 -->
+	<div class="mod-rightside">
+	    <ul>
+	        <li><em class="num-icon"></em><span>公众号</span>
+	            <div id="" class=" phonebg" style="">
+	                <img src="http://s2.xiu8.com/dist/img/pc/index/app2.jpg?v=1" alt="">
+	            </div>
+	        </li>
+	        <li><em class="ser-icon"></em><span>客服</span></li>
+	        <li><em class="help-icon"></em><span>帮助</span></li>
+	        <li><em class="top-icon"></em><span class="top-icon"></span></li>
+	    </ul>
 	</div>
 </body>
 </html>
