@@ -27,7 +27,7 @@
 		.demo3{
 		    width:300px;
 		    height: 50px;
-		    border:1px solid blue;
+		    border:3px solid red;
 		    color:#000;
 		    background: green;
 		    position: relative;  
@@ -35,7 +35,7 @@
 		.demo3::before{
 		    content:"";
 		    position: absolute;
-		    top:-.4em;left:1em;
+		    top:-.5em;left:1em;
 		    padding:.35em;
 		    background: inherit;
 		    border:inherit;
@@ -43,17 +43,34 @@
 		    border-bottom: 0;
 		    transform:rotate(45deg);
 		}
+		hr{
+			height:.5em;
+			background:currentColor;
+			margin:1em 0;
+		}
+		.demo4{
+			margin:20px;
+		}
+		.san{
+			border:10px solid green;
+			border-top-color:transparent;
+			border-right-color:transparent;
+			border-left-color:transparent;
+		}
 	</style>
 </head>
 <body>
 	<h3>1,currentColor:</h3>
 	<div class="demo1">它是border-color outline-color box-shadow text-shadow的默认值</div>
+	<hr>
 	<h3>2,inherit作用于color 和 font:</h3>
 	<div class="demo2">合理利用继承的作用&nbsp;<a href="#" class="a1">我是a标签</a>&nbsp;<a href="#">默认长这样</a></div>
+	<hr>
 	<h3>3,inherit作用于background:</h3>
 	<div class="demo3">
 	    注意我的小箭头使用了继承背景色，这个箭头其实是一个长方形旋转得来的哦
 	</div>
+	<div class="demo4"><span class="san"></span>这种三角形，没法实现边框颜色</div>
 	
 </body>
 </html>
