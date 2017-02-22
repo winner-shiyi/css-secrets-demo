@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>page10-currentColor-inherit</title>
+	<style>
+		*{padding:0;margin:0;}
+		body{
+			width:500px;
+			height:500px;
+			padding:100px;
+		}
+		.aa{
+			background:url(http://csssecrets.io/images/code-pirate.svg) no-repeat bottom 10px right 5px #58a;
+			background-origin:content-box;
+			max-width:10em;
+			min-height:5em;
+			padding:10px;
+			font: 100%/1 sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<p>这两个的的位置前后顺序有关系哦！！！</p>
+	<p>background: url(http://csssecrets.io/images/code-pirate.svg) no-repeat bottom 5px right 5px #58a;   这里的background-positon：bottom 和 right 默认的是根据padding-box来展示background-image的</p>
+	<p>background-origin: content-box; 这个写后面，就会覆盖 前面的默认padding-box</p>
+	
+</div>
+	<div class="aa">Code Pirate</div>
+</body>
+</html>
