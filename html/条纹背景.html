@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>横条纹背景</title>
+	<style>
+		*{padding:0;margin:0;}
+		body{
+			width:500px;
+			margin:0 auto;
+		}
+		.aa{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:linear-gradient(#fb3,#58a);
+		}
+		.aa1{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:linear-gradient(#fb3 20%,#58a 80%);
+		}
+		.aa2{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:linear-gradient(#fb3 40%,#58a 60%);
+		}
+		.aa3{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:linear-gradient(#fb3 50%,#58a 50%);
+		}
+		.aa4{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:#ccc linear-gradient(#fb3 50%,#58a 50%);
+			background-repeat:no-repeat;
+			background-size:100% 30px;
+		}
+		.aa5{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:#ccc linear-gradient(#fb3 20%,#58a 20%) repeat;
+			background-size:100% 30px;
+		}
+		.aa6{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:#ccc linear-gradient(#fb3 20%,#58a 0);
+		}
+		.aa7{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:#ccc linear-gradient(#fb3 20%,#58a 0,#58a 60%,red 0);
+			background-size:100% 30%;
+			background-repeat:no-repeat;
+		}
+	</style>
+</head>
+<body>	
+	<h3>要点备注：</h3>
+	<p>1，#fb3 20%这里的20%表示的是 黄色从20%处开始渐变 到 80%位置，20%之前是实色的黄色</p>
+	<p>2，#58a 80%这里的80%表示的是 蓝色的渐变也是在 20%到80% 之内的，80%之后是实色的蓝色</p>
+	<div class="aa"></div>
+	<div class="aa1"></div>
+	<div class="aa2"></div>
+	<div class="aa3"></div>
+	<div class="aa4"></div>
+	<div class="aa5"></div>
+	<h3>要点备注：</h3>
+	<p>1,<span style="color:red">如果某个色标的位置值比整个列表中在它之前的色标的位置值都要小，则该色标的位置值会被设置为它前面所有色标位置值的最大值。</span></p>
+	<p>2,们把第二个色标的位置值设置为 0 ，那它的位置就总是会被浏览器调整为前一个色标的位置值,这样我们就不需要如果要调整的话，每次要手动的调整两个地方的值，记住DRY</p>
+	<p>3,超过两种颜色的条纹，如何写</p>
+	<div class="aa6"></div>
+	<div class="aa7"></div>
+</body>
+</html>
