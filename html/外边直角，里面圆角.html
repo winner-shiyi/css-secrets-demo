@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>外边直角，里面圆角</title>
+	<style>
+		*{padding:0;margin:0;}
+		body{
+			width:500px;
+			height:500px;
+			margin:0 auto;
+		}
+		.aa{
+			width:100px;
+			height:80px;
+			padding:10px;
+			margin:30px;
+			background:tan;
+			outline:10px solid #655;
+			box-shadow:0 0 0 8px #655;
+			border-radius:6px;
+		}
+
+	</style>
+</head>
+<body>	
+	<h3>要点备注：</h3>
+	<p>1，border-radius的值等于r</p>
+	<p>2，如果outline的width 小于 （根号2-1）*r，那么无论box-shadow的扩展半径是多少，都没办法实现这个效果</p>
+	<p,3，outline的width > box-shadow的扩展半径 > （根号2-1）*r</p>
+	<p>4，（根号2-1）约等于 0.5</p>
+	<div class="aa"></div>
+</body>
+</html>
