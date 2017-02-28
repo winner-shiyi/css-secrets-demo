@@ -56,7 +56,7 @@
 			background-size:42px 42px;
 		}
 	</style>
-	<script src="http://libs.baidu.com/jquery/1.6.4/jquery.min.js"></script>
+	<script src="jquery-3.1.1.min.js"></script>
 </head>
 <body>	
 	<h3>要点备注：</h3>
@@ -74,9 +74,14 @@
 		</ul>
 	</div>
 	<script>
-	$('#box').on('#li','click',function(){
-		alert(11);
-	});
+
+		var $box = $('#box');
+		$('#box').on('click','#li',function(){
+			alert(11);
+		});
+
+
+	
 	</script>
 </body>
 </html>
