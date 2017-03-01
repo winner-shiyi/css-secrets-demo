@@ -68,17 +68,27 @@
 	<div class="aa3"></div>
 	<div class="aa4"></div>
 	<div class="aa5"></div>
-	<div class="box" id="box">
+	<div id="box">
 		<ul>
-			<li id="li">我是测试</li>
+			<li id="li1" class="demo1">我是测试1</li>
 		</ul>
 	</div>
 	<script>
 
-		var $box = $('#box');
-		$('#box').on('click','#li',function(){
+		//方法一：委托方法
+		/*$('#box').on('click','#li',function(){
 			alert(11);
+			$(this).removeClass();
+		});*/
+		//方法二：直接在元素上的方法
+		$('#li1').click(function(){
+			// alert(11);
+			$(this).html(111);
 		});
+
+		//重新插入html后，造成的影响是：方法二的 click事件将会失效
+		var str = '<ul><li id="li" class="demo1">我是测试2</li></ul>';
+		$('#box').html(str);
 
 
 	
